@@ -1,0 +1,13 @@
+#
+# Static web services via 127.0.0.*
+#
+server {
+    listen experiment-004.local:80;
+    server_name experiment-004.local;
+    root  /sites/experiment-004.local/www;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
