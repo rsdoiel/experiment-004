@@ -6,29 +6,37 @@
  * See: http://opensource.org/licenses/BSD-2-Clause
  */
 /*jslint browser: true, indent: 4 */
+/*global console */
 (function (global) {
     "use strict";
     function keys() {
-        throw "storage.keys() not implemented";
+        console.error("keys() not implemented.");
+        return false;
     }
 
     function stored(key) {
-        throw "storage.stored(" + key + ") not implemented.";
+        console.error("storage.stored(" + key +
+            ") not implemented.");
+        return false;
     }
 
     function save(key, value) {
-        throw "storage.save(" + key + "," +
+        console.error("storage.save(" + key + "," +
             JSON.stringify(value, null, 2) +
-            ") not implemented.";
+            ") not implemented.");
+        return false;
     }
 
     function remove(key) {
-        throw "storage.remove(" + key + ") not implemented.";
+        console.error("storage.remove(" + key +
+            ") not implemented.");
+        return false;
     }
 
     function find(filter) {
-        throw "storage.find(" + JSON.stringify(filter, null, 2) +
-            ") not implemented.";
+        console.error("storage.find(" +
+            JSON.stringify(filter, null, 2) +
+            ") not implemented.");
     }
 
     // Export as storage object.
