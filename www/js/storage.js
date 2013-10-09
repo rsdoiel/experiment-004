@@ -13,21 +13,24 @@
     }
 
     function stored(key) {
-        throw "storage.stored() not implemented.";
+        throw "storage.stored(" + key + ") not implemented.";
     }
-    
+
     function save(key, value) {
-        throw "storage.save() not implemented.";
+        throw "storage.save(" + key + "," +
+            JSON.stringify(value, null, 2) +
+            ") not implemented.";
     }
-    
+
     function remove(key) {
-        throw "storage.remove() not implemented.";
+        throw "storage.remove(" + key + ") not implemented.";
     }
-    
+
     function find(filter) {
-        throw "storage.find() not implemented.";
+        throw "storage.find(" + JSON.stringify(filter, null, 2) +
+            ") not implemented.";
     }
-    
+
     // Export as storage object.
     global.storage = {
         keys: keys,
@@ -35,5 +38,5 @@
         save: save,
         remove: remove,
         find: find
-    }
+    };
 }(this));
